@@ -2,18 +2,92 @@
 <html>
 <head>
   <title>WDD 330 Portfolio</title>
-  <script>
-
-
-  </script>
-
   <style>
-   
+   body {
+    background-color: lightgray;
+   }
 
   </style>
 </head>
 
 <body>
+    <h1>WDD 330 Portfolio</h1>
+    <ol id="weekList">
+
+    </ol>
 
 </body>
+<script>
+    let list = document.getElementById("weekList");
+    const links = [
+        {
+            label: "Week1",
+            url: "Week1/week1.html"
+        },
+        {
+            label: "Week2",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week3",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week4",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week5",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week6",
+            url: "notAvailable.html"
+        },{
+            label: "Week7",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week8",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week9",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week10",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week11",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week12",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week13",
+            url: "notAvailable.html"
+        },
+        {
+            label: "Week14",
+            url: "notAvailable.html"
+        }
+    ];
+
+    //loop through object
+    for (var i=0; i<links.length; i++) {
+        console.log(links[i].label);
+        let li = document.createElement("li");
+        let a = document.createElement("a");
+        a.innerText = links[i].label;
+        a.setAttribute("href", links[i].url);
+        list.appendChild(li);
+        list.appendChild(a);
+    }
+
+
+</script>
 </html>

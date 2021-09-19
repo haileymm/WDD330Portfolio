@@ -1,0 +1,53 @@
+<!--This app will allow people to write, save, edit, and show a story they write.-->
+
+<!doctype html>
+<html>
+<head>
+  <title>Week 1 Notes/Exercises</title>
+  <script>
+    function loadStory(){
+      var storyName = document.getElementById("name_input").value //Story name variable
+      var storyHTML = localStorage.getItem(storyName) //story text set as variable based on story name
+      document.getElementById("story_editor").value = storyHTML  //put the story text into the text area 
+    function saveStory(){
+      var storyName = document.getElementById("name_input").value //set story name variable value based on id
+      var storyHTML = document.getElementById("story_editor").value //set text variable value based on id
+      localStorage.setItem(storyName, storyHTML) //save to local storage under story name
+    }
+    function displayStory(){
+      var storyHTML = document.getElementById("story_editor").value // Set text variable 
+      document.getElementById("story_display").innerHTML = storyHTML //Display the text within the specified id
+    }
+
+  </script>
+
+  <style>
+    textarea{
+      width: 800px;
+      height: 250px;
+      background-color: lightyellow;
+    }
+    section{
+      margin: 20px 0px 20px 0px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Week 1 Notes/Exercises</h1>
+  <h2>Story Editor</h2>
+	Story Name: <input id=name_input></input>
+  <section>
+    <button onclick="loadStory()">Find and Edit It</button>
+    <button onclick="saveStory()">Save It</button>
+    <button onclick="displayStory()">Display It</button>
+  </section>
+  <textarea id="story_editor" placeholder="Write a totally awesome story here"></textarea>
+
+  <section id="story_display"></section>
+
+
+
+</body>
+</html>
