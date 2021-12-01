@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <title>Boredom Buster</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Boredom Buster</h1>
+    </header>
+    <main>
+        <h2>Looking for something to do?<br> Answer the questions below for activity suggestions.</h2>
+        <form id="form">
+            <div>
+            <label for="type" class="label">What type of activity?</label><br>
+            <select name="types" id="types">
+                <option value="education">Education</option>
+                <option value="recreational">Recreational</option>
+                <option value="social">Social</option>
+                <option value="diy">DIY</option>
+                <option value="charity">Charity</option>
+                <option value="cooking">Cooking</option>
+                <option value="relaxation">Relaxation</option>
+                <option value="music">Music</option>
+                <option value="busywork">Busywork</option>
+            </select><br>
+            </div>
+
+            <div>
+            <label for="numPeople" class="label">How many people?</label><br>
+            <select name="numPeople" id="numPeople">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select><br>
+            </div>
+
+            <div>
+            <label for="cost" class="label">How much to spend?</label><br>
+            <select name="costs" id="costs">
+                <option value="free">Free</option>
+            </select>
+            </div>
+            <input type="submit" name="submit" class="submitBtn" onclick="searchActivities()">
+        </form>
+        <div id="output">
+            <h3>Boredom Buster:</h3>
+            <div id="loading"></div>
+            <h4 id="activityOutput"></h4>
+            <button type="button" id="addFavorite">Add to Favorites!</button><br>
+            <a href="favorites.html"><button type="button" id="viewFavorites" >View Favorites</button></a>
+        </div>
+
+    </main>
+    <footer>
+        &copy Hailey Mundt 2021
+    </footer>
+</body>
+<script src="index.js">
+</script>
+</html>
