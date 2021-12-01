@@ -19,7 +19,7 @@ const types = document.getElementById("types");
 const type = types.options[types.selectedIndex].text;
 const people = document.getElementById("numPeople");
 const numPeople = people.options[people.selectedIndex].text;
-const apiURL = "http://www.boredapi.com/api/activity?type=" + type.toLowerCase() + "&participants=" + numPeople.toLowerCase() + "&price=" + "0.0";
+const apiURL = "https://www.boredapi.com/api/activity?type=" + type.toLowerCase() + "&participants=" + numPeople.toLowerCase() + "&price=" + "0.0";
 
 //print url to console
 console.log(apiURL);
