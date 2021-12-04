@@ -10,7 +10,7 @@
         <h1>Boredom Buster</h1>
     </header>
     <main>
-        <h2>Looking for something to do?<br> Answer the questions below for activity suggestions.</h2>
+        <h2>Looking for something to do?<br> Answer the questions below for an activity suggestion.</h2>
         <form id="form">
             <div>
             <label for="type" class="label">What type of activity?</label><br>
@@ -43,7 +43,8 @@
                 <option value="free">Free</option>
             </select>
             </div>
-            <input type="submit" name="submit" class="submitBtn" onclick="searchActivities()">
+            <input type="submit" name="submit" class="submitBtn" value="View My Idea" onclick="searchActivities()">
+            <button class="submitBtn" onclick="generateRandom()">Random Activity</button>
         </form>
         <div id="output">
             <h3>Boredom Buster:</h3>

@@ -35,3 +35,24 @@ fetch(apiURL)
     output.classList.add('display'); //display the output
   });
 }
+
+function generateRandom() {
+
+  //show loader until the text is output
+const loading = document.querySelector("#loading");
+const output = document.querySelector("#activityOutput");
+output.classList.remove('display');
+loading.classList.add('display'); //display the loading spinner
+
+  //fetch info from api and return the JSON object and output it on page
+const apiURL = "https://www.boredapi.com/api/activity/"
+fetch(apiURL)
+.then((response) => response.json())
+.then((jsObject) => {
+  console.log(jsObject);
+  
+  document.getElementById('activityOutput').textContent = JSON.stringify(jsObject.activity);
+  loading.classList.remove('display'); //don't display the loading spinner
+  output.classList.add('display'); //display the output
+});
+}
