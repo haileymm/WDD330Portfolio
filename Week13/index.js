@@ -23,18 +23,19 @@ addFavoriteBtn.addEventListener("click", addToFavorites, false);
 
 
 function addToFavorites() {
-  const activity = document.getElementById("activityOutput").innerHTML;
-  if (document.getElementById("activityOutput") == "") {
-    activity = "Nothing to add to favorites. Pick your parameters and click 'View My Idea' or click 'Random Activity' to view an idea you can add to your favorites";
+  let activity = document.getElementById("activityOutput").innerHTML;
+  if (activity === "" || activity === "Nothing to add to favorites. Pick your parameters and click 'View My Idea' or click 'Random Activity' to view an idea you can add to your favorites") {
+    document.getElementById("activityOutput").textContent = "Nothing to add to favorites. Pick your parameters and click 'View My Idea' or click 'Random Activity' to view an idea you can add to your favorites";
   } else {
   console.log(activity);
   list.push(activity);
   localStorage.setItem('favoritesList', JSON.stringify(list));
   console.log(list);
   console.log(localStorage);
-  alert(activity + " added to favorites")
+  document.getElementById("activityOutput").textContent = "Added to favorites: " + activity;
   }
 }
+
 
 function searchActivities() {
 
@@ -64,7 +65,11 @@ function searchActivities() {
     .then((jsObject) => {
       console.log(jsObject);
       
-      document.getElementById('activityOutput').textContent = jsObject.activity;
+      //show error if no results
+      if (jsObject.error == 'No activity found with the specified parameters') {
+        document.getElementById('activityOutput').textContent = "Error: " + jsObject.error + ". Please try again with different parameters or select Random Activity.";
+      } else {document.getElementById('activityOutput').textContent = jsObject.activity;
+    }
       
       loading.classList.remove('display'); //don't display the loading spinner
       output.classList.add('display'); //display the output

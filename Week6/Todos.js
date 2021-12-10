@@ -72,7 +72,7 @@ function getTodos() {
 
 //insert HTML elements according to the list
 function renderTodoList(list, element) {
-
+    
     let parentNode = document.querySelector('ul');
     const li = document.createElement('li');
     const label = document.createElement('label');
