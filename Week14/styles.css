@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Zen+Maru+Gothic&display=swap');
+
+
+h1{
+    background-color: rgb(57, 174, 74);
+    color: white;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    font-family: 'Acme', sans-serif;
+}
+
+h2{
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: rgb(76, 1, 76);
+    margin: 20px 15% 20px 15%;
+}
+
+form{
+    display: inline-block;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 20px;
+    margin: 0 15% 50px 15%;
+    width: 70%;
+}
+
+form div{
+    font-family: 'Acme', sans-serif;
+    font-size: 15px;
+    margin: 20px;
+}
+
+select{
+    margin-top: 10px;
+    width: 100%;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 15px;
+    padding: 10px;
+
+}
+
+.submitBtn{
+    background-color: rgb(76, 1, 76);
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-family: 'Acme', sans-serif;
+    font-size: 15px;
+    margin: 0 10px 0 20px;
+    padding: 10px;
+    display: inline;
+}
+
+#loading {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid rgba(76, 1, 76, 0.469);
+    border-right: 2px solid rgba(76, 1, 76, 0.115);
+    border-left: 2px solid rgb(76, 1, 76);
+    margin: 20px auto;
+    border-radius: 100%;
+    animation: spin 1s infinite linear;
+    display: none;
+}
+
+#loading.display {
+    display: block;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#output, #listOutput{
+    background-color: rgb(57, 174, 74);
+    padding: 50px;
+    margin: 5px 15% 20px 15%;
+    text-align: center;
+}
+
+h3{
+    font-size: 15px;
+    font-family: 'Acme', sans-serif;
+    color: rgb(76, 1, 76);
+    margin: 0;
+}
+
+#addFavorite {
+    background-color: rgb(76, 1, 76);
+    color: white;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-family: 'Acme', sans-serif;
+    font-size: 15px;
+    margin: 10px;
+}
+
+#viewFavorites, #backToSearch{
+    background-color: orange;
+    border: none;
+    width: 150px;
+    height: 40px;
+    font-family: 'Acme', sans-serif;
+    font-size: 15px;
+    margin: 10px;
+}
+
+#activityOutput {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#listOutput{
+    padding: 20px;
+}
+
+#listItem{
+    display: flex;
+    padding: 0;
+    background-color: rgb(76, 1, 76);
+}
+
+li {
+    font-family: 'Zen Maru Gothic', sans-serif;
+    font-size: 18px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    text-align: left;
+    color: white;
+    
+}
+
+#remove{
+    margin: auto 10px auto auto;
+    background-color: orange;
+    color: white;
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    font-family: 'Zen Maru Gothic', sans-serif;
+    padding: 10px 10px 10px 20px;
+}

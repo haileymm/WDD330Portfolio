@@ -71,4 +71,7 @@ function renderList(list, element) {
     
     let listItems = localStorage.getItem('favoritesList');
     let list = JSON.parse(listItems);
+    list.splice(i, 1);
+    localStorage.setItem("favoritesList", JSON.stringify(list));
+    window.location.reload();
   }
